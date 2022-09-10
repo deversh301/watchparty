@@ -1,0 +1,439 @@
+/* grobal css starts  */
+
+/* font family used  */
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background: transparent linear-gradient(180deg, #000000 0%, #c4b4c5 100%) 0% 0% no-repeat padding-box;
+}
+
+html {
+    font-family: 'Noto Sans Lao', sans-serif;
+}
+
+.my-page {
+    max-width: 100%;
+    width: 575px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #fff;
+    position: relative;
+}
+
+/* global css ends here */
+
+/* login page css starts here  */
+
+.login-page-box {
+    min-height: 480px;
+    min-height: 100vh;
+    padding: 0px;
+    background: linear-gradient(169deg, #4e4949 0%, #4e4949 100%) !important;
+}
+
+.login-page-img-wrap {
+    height: 230px;
+}
+
+.login-page-img-wrap img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* login btn box start */
+
+.login-btn-box {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.login-btn {
+    margin-top: 30px;
+    border-radius: 25px;
+    background: #2972FF;
+    color: #fff;
+    font-size: 20px;
+    line-height: 27px;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+}
+
+.login-btn i {
+    font-size: 24px;
+}
+
+.login-btn-box h3 {
+    font-size: 28px;
+    line-height: 37px;
+    font-family: 'Noto Sans Lao', sans-serif;
+    font-weight: 600;
+}
+
+.login-btn-box span {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: 'Noto Sans Lao', sans-serif;
+    font-weight: 400 !important;
+}
+
+/* login btn box ends here */
+
+/* login contact box  start here*/
+
+.login-contact-box {
+    height: auto;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    font-family: 'Noto Sans Lao', sans-serif;
+}
+
+.login-contact-box span {
+    font-size: 17px;
+    line-height: 23px;
+    color: #292929;
+}
+
+.login-contact-number {
+    /* text-decoration: none; */
+    font-size: 17px;
+    font-weight: 600;
+    color: #753E90 !important;
+}
+
+.login-contact-box a {
+    text-decoration: underline;
+    letter-spacing: 0px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000;
+}
+
+.fb-name {
+    line-height: 20px;
+    font-weight: 500;
+    font-family: 'Noto Sans Lao', sans-serif;
+}
+
+/* login page css ends here */
+
+/* home page css   start */
+
+.home-nav {
+    height: 74px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    padding: 17px;
+    background: #fff;
+}
+
+.left i {
+    font-size: 24px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #E8E8E8;
+    padding-bottom: 2px;
+    margin-right: 12px;
+}
+
+.left span {
+    color: #292929;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.nav-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.home-slider {
+    padding: 7px 17px 7px;
+}
+
+.home-slider img {
+    border-radius: 5px;
+}
+
+.carousel-indicators {
+    position: static;
+    /* background: #000; */
+}
+
+.carousel-indicators button {
+    border-radius: 50%;
+    height: 10px !important;
+    width: 10px !important;
+    background-color: #461547 !important;
+}
+
+.vote-audit {
+    height: 33px;
+    background: #fff;
+}
+
+.nav-link {
+    border-color: #fff !important;
+    border-bottom: 2px solid #D8D8D8 !important;
+}
+
+.nav-link.active {
+    color: #461547 !important;
+    border-bottom: 2px solid #461547 !important;
+    border-color: none !important;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: #fff !important;
+    isolation: isolate;
+    border-bottom: 2px solid #D8D8D8 !important;
+}
+
+.nav-tabs .nav-link.active:hover {
+    border-bottom: 2px solid #461547 !important;
+    isolation: isolate;
+}
+.vote-haeding{
+    color:#292929;
+    font-size: 17px;
+    line-height: 22px;
+    /* padding-top: px; */
+}
+.vote-card-box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:30px;
+    background: #fff;
+    padding-top: 30px;
+    padding-right: 42px;
+    padding-left: 42px;
+}
+@media screen and (max-width:575px) {
+    .vote-card-box{
+        padding-right: 10px;
+    padding-left: 10px;
+    }
+    
+}
+.sort-data-box{
+    border:1px solid #D8D8D8;
+    border-radius: 10px;
+    height: 57px;
+    position: relative;
+}
+.sort-data-box p{
+   padding-right: 7px;
+   padding-left: 7px;
+    background: #fff;
+    position: absolute;
+    top:-12px;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    line-height: 17px;
+}
+.sort-button{
+    border: none;
+    border-radius: 6px;
+    background: #D8D8D8;
+    color: #000;
+    width: 45%;
+    font-weight: 500;
+    font-size: 13px;
+}
+.sort-button.active{
+    background: #753E90;
+    color:#fff;
+    font-weight: 400;
+}
+
+/* vote card css start here */
+.vote-card{
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.vote-card-img-box{
+    height:auto;
+    position: relative;
+}
+.vote-card-img-box img{
+    height:100%;
+    width:100%;
+  
+}
+.card-tag{
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    left:0;
+    background: linear-gradient(359deg, #461547 0%, #46154700 100%);
+    height:40px;
+    color: #fff;
+    line-height: 27px;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.vote-btn{
+    border:none;
+    background: #D59516;
+    color: #fff;
+    border-radius: 5px;
+    height: 27px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+}
+.vote-card-content h4{
+    color: #292929;
+    font-weight: 500;
+    font-size: 17px;
+    text-transform: capitalize;
+line-height: 23px;
+}
+.vote-card-content p{
+    color: #292929;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+/* vote card css ends here */
+/* footer content home page */
+ .home-contact-box {
+    height: auto;
+    background: #fff;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    font-family: 'Noto Sans Lao', sans-serif;
+}
+
+.home-contact-box span {
+    font-size: 17px;
+    line-height: 23px;
+    color: #292929;
+}
+
+.login-contact-number {
+    /* text-decoration: none; */
+    font-size: 17px;
+    font-weight: 600;
+    color: #753E90 !important;
+}
+
+.home-contact-box a {
+    text-decoration: underline;
+    letter-spacing: 0px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000;
+}
+
+.fb-name {
+    line-height: 20px;
+    font-weight: 500;
+    font-family: 'Noto Sans Lao', sans-serif;
+}
+/* audit box */
+.audit-box{
+    height: auto !important;
+}
+.contestent-list{
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+
+}
+.contestent-list li{
+    width: 100%;
+    height:30px;
+    padding-left: 10px;
+
+}
+.contestent-list li:hover{
+  background: #E8E8E8 ;
+  cursor: pointer;
+}
+.accordion-button {
+    margin: 0 auto !important;
+    padding:10px !important;
+    background-color: #E8E8E8;
+}
+.accordion-button::after{
+  margin-left: 10px !important;
+  color: #E8E8E8;
+}
+.accordion-button::after .collapsed{
+    /* margin-left: 0 !important; */
+    color: #E8E8E8 !important;
+  }
+.accordion-button:focus{
+    box-shadow: none !important;
+    background: #E8E8E8;
+}
+.accordion-button:not(.collapsed) {
+    color: #000 !important;
+    background-color: #E8E8E8;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+.accordion-button:not(.collapsed)::after {
+    background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+    transform: rotate(
+-180deg);
+}
+.select-wrap{
+    width:80%;
+    margin: 0 auto;
+}
+.select-contest{
+    margin-left:43% ;
+}
+
+.video-container {
+    overflow: hidden;
+    position: relative;
+    width:100%;
+}
+
+.video-container::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@media screen and (max-width:410px) {
+    .select-contest{
+        margin-left:38% ;
+    }
+}
+/* home page css ends here */
+

@@ -1,0 +1,28 @@
+{
+  "name": "watch_party",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ershyadav@bitbucket.org/ershyadav/watch_party.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/ershyadav/watch_party#readme",
+  "dependencies": {
+    "ajv": "^8.5.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.8",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "mysql-migrations": "^1.0.7",
+    "nodemon": "^2.0.19",
+    "socket.io": "^4.5.2"
+  }
+}
