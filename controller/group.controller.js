@@ -48,7 +48,7 @@ async function  get_group(req , res ){
                  console.log(result)
                  res.json({'status':200 , 'data': result })
         } catch (e){
-                console.log('errror found')
+                console.log('errror found'+e)
                 res.json({'status':500 , 'message': 'some error happens' })
         }
 } 
