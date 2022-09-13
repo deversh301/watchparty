@@ -40,6 +40,6 @@ io.on('connection', (socket) => {
     });
 });
 
-server.listen(8000, () => {
+server.listen(3000, () => {
   console.log('listening on *:8000');
 });

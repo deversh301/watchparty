@@ -14,7 +14,7 @@ async function  create_group(req , res ){
                 res.json({'status':200 , 'group_code': group_code })
                 // console.log(`A document was inserted with the _id: ${result.insertedId}`);
         } catch (e){
-                console.log('errror found')
+                console.log('errror found'+e)
                 res.json({'status':500 , 'message': 'some error happens' })
         }
 } 
