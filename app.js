@@ -4,6 +4,7 @@ const app = express();
 const http = require('http');
 const cors = require('cors')
 const server = http.createServer(app);
+const port = process.env.PORT || 3000
 
 app.set("view engine", "ejs");
 
@@ -40,6 +41,6 @@ io.on('connection', (socket) => {
     });
 });
 
-server.listen(3000, () => {
+server.listen(port, () => {
   console.log('listening on *:8000');
 });
