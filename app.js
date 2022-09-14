@@ -42,12 +42,12 @@ io.on('connection', (socket) => {
       );
     });
 
-    socket.on('chat_message', function (data) {
-      console.log('chat_message')
-      io.emit('chat_send', {chatmessage:data.chatmessage , 
-        sender_id:data.sender_id}
-      );
-    });
+    // socket.on('chat_message', function (data) {
+    //   console.log('chat_message')
+    //   io.emit('chat_send', {chatmessage:data.chatmessage , 
+    //     sender_id:data.sender_id}
+    //   );
+    // });
 });
 
 server.listen(port, () => {
