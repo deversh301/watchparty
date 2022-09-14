@@ -37,7 +37,16 @@ io.on('connection', (socket) => {
       console.log(data.emit_from_clint)
       console.log(data.group_code)
       socket.join(data.group_code); // We are using room of socket io
-      io.in(data.group_code).emit('send_pointer', data.emit_from_clint);
+      io.in(data.group_code).emit('send_pointer', {pointer:data.emit_from_clint , 
+          user_id:data.sender_id , player_state:data.player_state}
+      );
+    });
+
+    socket.on('chat_message', function (data) {
+      console.log('chat_message')
+      io.emit('chat_send', {chatmessage:data.chatmessage , 
+        sender_id:data.sender_id}
+      );
     });
 });
 
