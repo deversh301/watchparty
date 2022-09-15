@@ -6,6 +6,7 @@ const cors = require('cors')
 const server = http.createServer(app);
 const port = process.env.PORT || 8000
 
+
 app.set("view engine", "ejs");
 
 app.use(express.static(__dirname + '/public'));
@@ -15,7 +16,7 @@ app.use(cors())
 const { Server } = require("socket.io")
 const io = new Server(server ,  {
   cors: {
-    origin: ["http://192.168.1.4:3000", "http://watchpartyyoutube.epizy.com","http://localhost:3000"],
+    origin: ["http://192.168.1.5:3000", "http://watchpartyyoutube.epizy.com","http://localhost:3000"],
     // or with an array of origins
     // origin: ["https://my-frontend.com", "https://my-other-frontend.com", "http://localhost:3000"],
     credentials: true
@@ -34,22 +35,32 @@ io.on('connection', (socket) => {
     // });
 
     socket.on('join', function (data) {
+      console.log('join_got_in_server')
       console.log(data.emit_from_clint)
       console.log(data.group_code)
       socket.join(data.group_code); // We are using room of socket io
+
+
+
       io.in(data.group_code).emit('send_pointer', {pointer:data.emit_from_clint , 
           user_id:data.sender_id , player_state:data.player_state}
       );
     });
 
-    // socket.on('chat_message', function (data) {
-    //   console.log('chat_message')
-    //   io.emit('chat_send', {chatmessage:data.chatmessage , 
-    //     sender_id:data.sender_id}
-    //   );
-    // });
+      socket.on('chat_message', function (data ) {
+        console.log(data)
+        // if(data.data){
+        console.log('emission done'+socket.id)
+        
+        io.to(data.group_code).emit('chat_send', {chatmessage:data.chatmessage , 
+            sender_id:data.sender_id , socket_id:socket.id , username:data.username}
+          );
+        // }
+      });
 });
 
 server.listen(port, () => {
   console.log('listening on *:8000');
 });
+
+
