@@ -54,6 +54,22 @@ async function  get_group(req , res ){
 } 
 
 
+async function  get_members(req , res ){
+        try {
+                 console.log(req.params.id)
+                 const haiku = db.database.collection("group_members");
+                 const query = { 'group_code': req.params.id };
+                 const options = {};
+                 const result = await haiku.find(query).toArray();;
+                 console.log(result)
+                 res.json({'status':200 , 'data': result })
+        } catch (e){
+                console.log('errror found'+e)
+                res.json({'status':500 , 'message': 'some error happens' })
+        }
+} 
+
+
     function makeid(length) {
         var result           = '';
         var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -65,4 +81,4 @@ async function  get_group(req , res ){
        return result;
     }
 
-module.exports = { create_group , get_group , add_members_in_group}
+module.exports = { create_group , get_group , get_members,  add_members_in_group}
