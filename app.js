@@ -75,6 +75,14 @@ io.on('connection', (socket) => {
        );
       });
 
+    
+       socket.on('refresh_page', function (data ) {
+       remove_user_in_group(data.group_code)
+       console.log('refresh emits')
+       io.to(data.group_code).emit('refresh_page', {group_code:data.group_code}
+       );
+      });
+
 
 
 
