@@ -45,7 +45,8 @@ io.on('connection', (socket) => {
 
     socket.on('join', function (data) {
        console.log('join_got_in_server')
-      //console.log(data.emit_from_clint)
+       console.log(data)
+       add_if_not_exist(data);
     ///  console.log(data.group_code)
       socket.join(data.group_code); // We are using room of socket io
       group_code = data.group_code
@@ -88,6 +89,26 @@ io.on('connection', (socket) => {
 
 
 });
+
+async function add_if_not_exist(data){
+  try{
+                  const haiku = db.database.collection("group_members");
+                  
+                 // create a filter for a movie to update
+   		 const filter = { '_id': new mongodb.ObjectId(data.sender_id)};
+   	         // this option instructs the method to create a document if no documents match the filter
+    		 const options = { upsert: true};
+    		 // create a document that sets the plot of the movie
+   		 const updateDoc = {
+   		   $set:{ 'group_code': data.group_code ,  username: data.username  },
+    		};
+    		const result = await haiku.updateOne(filter, updateDoc, options);
+                console.log(result)
+    
+   }catch(e){
+    	console.log('errror found'+e)
+   }
+}
 
 
 async function  remove_user_in_group(id){
