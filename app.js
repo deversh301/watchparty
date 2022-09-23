@@ -63,7 +63,7 @@ io.on('connection', (socket) => {
      /////   console.log('emission done'+socket.id)
         
         io.to(data.group_code).emit('chat_send', {chatmessage:data.chatmessage , 
-            sender_id:data.sender_id , socket_id:socket.id , username:data.username}
+            sender_id:data.sender_id , socket_id:socket.id , username:data.username , type:data.type}
           );
         // }
       });
