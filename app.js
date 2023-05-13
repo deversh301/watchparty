@@ -15,9 +15,10 @@ let routes = require('./routes/route.js');
 app.use(express.json());
 app.use(cors())
 const { Server } = require("socket.io")
-const io = new Server(server ,  {
+const io = require("socket.io")(httpServer, {
   cors: {
-    origin: '*',
+    origin: "/*",
+    methods: ["GET", "POST"]
   }
 });
 app.use('/', routes);
