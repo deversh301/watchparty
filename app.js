@@ -17,7 +17,10 @@ app.use(cors())
 const { Server } = require("socket.io")
 const io = new Server(server ,  {
   cors: {
-    origin: '*',
+    origin: ["http://127.0.0.1:3000", "https://deversh301-animated-invention-5rpwxg9pg5gfqgw-3000.preview.app.github.dev/", "http://192.168.1.4:3000" , "http://192.168.1.3:3000" ,"http://watchpartyyoutube.epizy.com","http://localhost:3000"],
+    // or with an array of origins
+    // origin: ["https://my-frontend.com", "https://my-other-frontend.com", "http://localhost:3000"],
+    credentials: true
   }
 });
 app.use('/', routes);
@@ -121,5 +124,4 @@ async function  remove_user_in_group(id){
 server.listen(port, () => {
   console.log('listening on *:8000');
 });
-
 
